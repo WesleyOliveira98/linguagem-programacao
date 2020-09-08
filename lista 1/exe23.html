@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 23</title>
+        <script>
+            function calc() {
+                var a1 = Number(document.getElementById("a1").value)
+                var a2 = Number(document.getElementById("a2").value)
+                res.innerHTML = `O terceiro ãngulo tem ${180 - (a1 + a2)}°`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo para encontrar o terceiro ãngulo de um triângulo</h1>
+        <h2 align="middle"><input type="number" placeholder="Ângulo 1" id="a1"></h2>
+        <h2 align="middle"><input type="number" placeholder="Ângulo 2" id="a2"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

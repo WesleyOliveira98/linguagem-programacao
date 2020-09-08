@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 1</title>
+        <style>
+            body {
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calc() {
+                let n1 = Number(document.getElementById("n1").value)
+                let n2 = Number(document.getElementById("n2").value)
+                let n3 = Number(document.getElementById("n3").value)
+                let n4 = Number(document.getElementById("n4").value)
+                let media = (n1 + n2 + n3 + n4) / 4
+                let aprovado
+                if (media >= 7) {
+                    aprovado = "VOCÊ FOI APROVADO!"
+                }
+                else {
+                    aprovado = "VOCÊ NÃO FOI APROVADO!"
+                }
+                let res
+                document.getElementById("res").innerHTML = `Média Final: ${media} <br / >
+                ${aprovado}`
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Boletim Escolar</h1>
+        <h3> <input type="number" placeholder="Nota 1° Bimestre" id="n1"></h3>
+        <h3> <input type="number" placeholder="Nota 2° Bimestre" id="n2"></h3>
+        <h3> <input type="number" placeholder="Nota 3° Bimestre" id="n3"></h3>
+        <h3> <input type="number" placeholder="Nota 4° Bimestre" id="n4"></h3>
+        <h3> <button type="button" onclick="calc()">Calcular</button></h3>
+        <h3 id="res"></h3>
+    </body>
+</html>

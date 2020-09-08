@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 19</title>
+        <script>
+            function calc() {
+                var d1 = Number(document.getElementById("d1").value)
+                var d2 = Number(document.getElementById("d2").value)
+                res.innerHTML = `O valor da área do cômodo é: ${d1*d2}m² <br />
+                A potência de iluminação que deverá ser utilizada é: ${(d1*d2)*18}W`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo para iluminar o cômodo de maneira correta</h1>
+        <h2 style="color: #ffffff;" align="middle">Entre com os valores das dimensões (em metros) do cômodo</h2>
+        <h2 align="middle"><input type="number" placeholder="Dimensão 1" id="d1"></h2>
+        <h2 align="middle"><input type="number" placeholder="Dimensão 2" id="d2"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

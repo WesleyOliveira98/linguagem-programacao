@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 6</title>
+        <style>
+            body {
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calc() {
+                let n1 = Number(document.getElementById("n1").value)
+                let n2 = Number(document.getElementById("n2").value)
+                let op = Number(document.getElementById("op").value)
+                let res
+                switch (op) {
+                    case 1:
+                        res = Math.pow(n1,n2)
+                        document.getElementById("res").innerHTML = `${n1} ^ ${n2} = ${res}`
+                        break;
+                    case 2:
+                        document.getElementById("res").innerHTML = `Raiz quadrada de ${n1}: ${(Math.sqrt(n1)).toFixed(2)} <br />
+                        Raiz quadrada de ${n2}: ${(Math.sqrt(n2)).toFixed(2)}`
+                        break;
+                    case 3:
+                        document.getElementById("res").innerHTML = `Raiz cúbica de ${n1}: ${(Math.cbrt(n1)).toFixed(2)} <br />
+                        Raiz cúbica de ${n2}: ${(Math.cbrt(n2)).toFixed(2)}`
+                        break;
+                    default: document.getElementById("res").innerHTML = `Operação Inválida`
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Faça a Operação Desejada</h1>
+        <h3><input type="number" placeholder="Digite um número" id="n1"></h3>
+        <h3><input type="number" placeholder="Digite um número" id="n2"></h3>
+        <h3>Operações<h3>
+            <select id="op">
+                <option value="1">1. O primeiro número elevado ao segundo</option>
+                <option value="2">2. Raiz quadrada de cada um dos números</option>
+                <option value="3">3. Raiz cúbica de cada um dos números</option>
+            </select>
+        </h3>
+        <h3><button type="button" onclick="calc()">Calcular</button></h3>
+        <h3 id="res"></h3>
+    </body>
+</html>

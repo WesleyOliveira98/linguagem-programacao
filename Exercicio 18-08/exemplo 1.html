@@ -1,0 +1,63 @@
+<!-- comentário em HTML-->
+<!DOCTYPE html> <!-- cabeçalho do documento hmtl versão 5 -->
+<html lang="pt-br"> <!-- elemento raiz do html e idioma do script-->
+    <head> <!--cabeçalho da página-->
+        <meta charset="utf-8"> <!--o idioima é o português e portanto precisa suportar acento  e cedilha-->
+        <title>Calculadora de IMC</title> <!--título da página-->
+        <script>
+            //função será chamada quaando o botão for clicado
+            function calcular() {
+                //recupera o valor do peso informado pelo usuário na caixa de texyo
+                var peso = document.getElementById("peso").value
+                //
+                var altura = document.getElementById("altura").value
+                //calcula o valor do IMC
+                if ((peso == "") || (altura == "")){
+                    document.getElementById("imc").innerHTML = "Valores Inválidos" }
+                else {
+                var imc = peso / (altura * altura)
+                //var imc = peso / Math.pow(altura,2)
+                //mostrar o resultado para o usuário
+                //atenção: usamos crase neste caso
+                // como o resultado estará dentro do h3, precisamos utilizar o atributo innerHTML
+                // vamos limitar o número de casas depois da vírgula: usando a função toFixed(qntd de casas depois da vírgula)
+                document.getElementById("imc").innerHTML = `O valor do IMC é ${imc.toFixed(2)}`
+                }
+                
+                var resultado
+                if (imc < 18.5) {
+                    resultado = "Abaixo do peso"
+                }
+                else if ((imc >= 18.5) && (imc < 25)) {
+                    resultado = "Peso normal"
+                }
+                else if ((imc >= 25) && (imc < 30)){
+                    resultado = "Sobrepeso"
+                }
+                else if ((imc >= 30) && (imc < 35)){
+                    resultado = "Obesidade grau 1"
+                }
+                else if ((imc >= 35) && (imc <= 40)){
+                    resultado = "Obesidade grau 2"
+                }
+                else if (imc > 40){
+                    resultado = "Obesidade grau 3"
+                }
+                document.getElementById("resultado").innerHTML = `${resultado}`
+            }    
+        </script>
+    </head>
+    <body style="background-color: black;"> <!--corpo da página-->
+        <h1 style="color: #ffffff;" align="center">Calculadora de IMC</h1> <!--cabeçalho de nível-->
+        <h3 style="color: #ffffff;" align="center">
+            Informe o seu peso em kgs (utilize ponto e não vírgula) <input type="number" id="peso"> 
+        </h3> <!-- caixa de entreada com id peso-->
+        <h3 style="color: #ffffff;" align="center">
+            Informe a sua altura em metros (utilize ponto e não vírgula) <input type="number" id="altura"> 
+        </h3> <!-- caixa de entreada com id altura-->
+        <h3 align="center"> <button type="button" onclick="calcular()">Calcular botão</button> </h3>
+        <h3 style="color: #ffffff;" align="center"> 
+            <p id="imc"></p><p id="resultado"></p> 
+        </h3>
+    </body>
+</html>

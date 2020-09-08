@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 3</title>
+        <style>
+            body {
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calc() {
+                let n1 = Number(document.getElementById("n1").value)
+                let n2 = Number(document.getElementById("n2").value)
+                let menor
+                if (n1 < n2) {
+                    menor = n1
+                }
+                else {
+                    menor = n2
+                }
+                document.getElementById("menor").innerHTML = `O menor número é o ${menor}`
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Veja qual número é o menor</h1>
+        <h3><input type="number" placeholder="Digite um número" id="n1"></h3>
+        <h3><input type="number" placeholder="Digite um número" id="n2"></h3>
+        <h3><button type="button" onclick="calc()">Ver</button></h3>
+        <h3 id="menor"></h3>
+    </body>
+</html>

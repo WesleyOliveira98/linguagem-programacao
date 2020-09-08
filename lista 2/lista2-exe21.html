@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 21</title>
+        <script>
+            function calc() {
+                var cod = Number(document.getElementById("cod").value)
+                var res
+                if (cod == 1) {
+                    res = "A procedência do produto é da região Sul"
+                }
+                else if (cod == 2) {
+                    res = "A procedência do produto é da região Norte"
+                }
+                else if (cod == 3) {
+                    res = "A procedência do produto é da região Leste"
+                }
+                else if (cod == 4) {
+                    res = "A procedência do produto é da região Oeste"
+                }
+                else if ((cod == 5) || (cod == 6)) {
+                    res = "A procedência do produto é da região Nordeste"
+                }
+                else if ((cod >= 7) && (cod <= 9)) {
+                    res = "A procedência do produto é da região Sudeste"
+                }
+                else if ((cod >= 10) && (cod <= 20)) {
+                    res = "A procedência do produto é da região Centro-oeste"
+                }
+                else if ((cod >= 21) && (cod <= 30)) {
+                    res = "A procedência do produto é da região Nordeste"
+                }
+                else {
+                    res = "Código não localizado"
+                }
+                document.getElementById("resposta").innerHTML = `${res}`
+
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Consulta a Procedência do Produto</h1>
+        <h3 align="middle"><input type="number" placeholder="Digite o valor do produto"></h3>
+        <h3 align="middle"><input type="number" placeholder="Digite o código de origem" id="cod"></h3>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="resposta"></h3>
+    </body>
+</html>

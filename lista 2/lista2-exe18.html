@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 18</title>
+        <script>
+            function calc() {
+                var n = Number(document.getElementById("n").value)
+                var res
+                if (n >= 18) {
+                    res = "Já é Maior de Idade"
+                }
+                else {
+                    res = "Ainda Menor de Idade"
+                }
+                document.getElementById("res").innerHTML = `${res}`
+
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Consulta de Maioridade</h1>
+        <h3 align="middle"><input type="number" placeholder="Digite sua idade" id="n"></h3>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="res"></h3>
+    </body>
+</html>

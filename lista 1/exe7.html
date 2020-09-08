@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 7</title>
+        <script>
+            function engordar() {
+                var peso = Number(document.getElementById("peso").value)
+                var g = peso * 1.15
+                document.getElementById("g").innerHTML = `${g.toFixed(1)}Kg (+ 15%)`
+            }
+            function emagrecer() {
+                var peso = parseFloat(document.getElementById("peso").value)
+                var m = peso * 0.8
+                document.getElementById("m").innerHTML = `${m.toFixed(1)}Kg (- 20%)`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Estimativa de Peso</h1>
+        <h2 align="middle"><input type="number" placeholder="Digite o seu peso em Kg" id="peso"></h2>
+        <h2 align="middle"><button type="button" onclick="engordar()">Ganhar 15% do peso</button>
+        <button type="button" onclick="emagrecer()">Perder 20% do peso</button></h2>
+        <h2 align="middle" style="color: #ffffff;" id="g"></h2>
+        <h2 align="middle" style="color: #ffffff;" id="m"></h2>
+    </body>
+</html>

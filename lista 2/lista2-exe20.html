@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 20</title>
+        <script>
+            function calc() {
+                var i = Number(document.getElementById("i").value)
+                var res
+                if (i < 5) {
+                    res = "A idade mínima é de 5 anos"
+                }
+                else if (i <= 7) {
+                    res = "A sua categoria é: Infantil"
+                }
+                else if (i <= 10) {
+                    res = "A sua categoria é: Juvenil"
+                }
+                else if (i <= 15) {
+                    res = "A sua categoria é: Adolescente"
+                }
+                else if (i <= 30) {
+                    res = "A sua categoria é: Adulto"
+                }
+                else if (i > 30) {
+                    res = "A sua categoria é: Sênior"
+                }
+                document.getElementById("resposta").innerHTML = `${res}`
+
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Consulta de Categoria Natação</h1>
+        <h3 align="middle"><input type="number" placeholder="Digite sua Idade" id="i"></h3>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="resposta"></h3>
+    </body>
+</html>

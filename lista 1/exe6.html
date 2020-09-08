@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 6</title>
+        <script>
+            function com() {
+                var ven = Number(document.getElementById("ven").value) 
+                var sal = Number(document.getElementById("sal").value)
+                var c = ven * 0.04
+                var s = sal + c
+                document.getElementById("c").innerHTML = `A Comissão foi de R$${c.toFixed(2)}`
+                document.getElementById("s").innerHTML = `O Salário Total foi de R$${s.toFixed(2)}`
+            }
+            function salf() {
+                
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo Salário</h1>
+        <h2 align="middle"><input type="number" placeholder="Digite o Sálario Fixo" id="sal"></h2>
+        <h2 align="middle"><input type="number" placeholder="Digite o Total de Vendas" id="ven"></h2>
+        <h4 style="color: #ffffff;" align="middle">Coloque ponto (.) no lugar da vírgula (,)</h4>
+        <h2 align="middle"><button type="button" onclick="com()">Calcular Comissão e Salário Final</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="c"></h2>
+        <h2 align="middle" style="color: #ffffff;" id="s"></h2>  
+
+    </body>
+</html>

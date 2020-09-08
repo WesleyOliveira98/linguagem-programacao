@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 22</title>
+        <script>
+            function calc() {
+                var n = Number(document.getElementById("n").value)
+                res.innerHTML = `O Número de Diagonais é: ${n * (n-3) / 2}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo de Número de Diagonais de Polígono Convexo</h1>
+        <h2 align="middle"><input type="number" placeholder="Número de Lados" id="n"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular Número de Diagonais</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

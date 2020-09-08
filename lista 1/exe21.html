@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 21</title>
+        <script>
+            function calc() {
+                var sal = Number(document.getElementById("sal").value)
+                var ht = Number(document.getElementById("ht").value)
+                var he = Number(document.getElementById("he").value)
+                var salhora = sal / 8
+                var salhe = sal / 4
+                res.innerHTML = `O salário a receber é de: R$${((ht * salhora) + (he * salhe)).toFixed(2)}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo Salarial</h1>
+        <h2 align="middle"><input type="number" placeholder="Salário mínimo" id="sal"></h2>
+        <h2 align="middle"><input type="number" placeholder="Horas trabalhadas" id="ht"></h2>
+        <h2 align="middle"><input type="number" placeholder="Horas extras trabalhadas" id="he"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

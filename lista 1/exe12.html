@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 12</title>
+        <script>
+            function calc() {
+                var min = Number(document.getElementById("min").value) 
+                var sal = Number(document.getElementById("sal").value)
+                var res = sal / min
+                document.getElementById("res").innerHTML = `Você recebe ${res.toFixed(0)} Salário(s) Mínimo(s)`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo Quantidade de Salários Mínimos</h1>
+        <h2 align="middle"><input type="number" placeholder="Digite o Sálario Mínimo" id="min"></h2>
+        <h2 align="middle"><input type="number" placeholder="Digite o seu Sálario" id="sal"></h2>
+        <h4 style="color: #ffffff;" align="middle">Coloque ponto (.) no lugar da vírgula (,)</h4>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular Quantidade de Salários Mínimos</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2> 
+    </body>
+</html>

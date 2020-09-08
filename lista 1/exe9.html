@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 9</title>
+        <script>
+            function area() {
+                var bmaior = Number(document.getElementById("bmaior").value)
+                var bmenor = Number(document.getElementById("bmenor").value)
+                var altura = Number(document.getElementById("altura").value)
+                var a = ((bmaior + bmenor) * altura)/2
+                document.getElementById("a").innerHTML = `A Área é de ${a}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 align="middle" style="color: #ffffff;">Calcule a Área de um Trapézio</h1>
+        <h2 align="middle"><input type="number" placeholder="Valor da base maior" id="bmaior"></h2>
+        <h2 align="middle"><input type="number" placeholder="Valor da base menor" id="bmenor"></h2>
+        <h2 align="middle"><input type="number" placeholder="Valor da altura" id="altura"></h2>
+        <h2 align="middle"><button type="button" onclick="area()">Calcular Área</button></h2>
+        <h2 align="middle" style="color: #ffffff;" id="a"></h2>
+    </body>
+</html>

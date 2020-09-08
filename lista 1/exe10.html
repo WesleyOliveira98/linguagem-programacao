@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 10</title>
+        <script>
+            function area() {
+                var lado = Number(document.getElementById("lado").value)
+                var a = lado * lado
+                document.getElementById("a").innerHTML = `A Área é de ${a}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 align="middle" style="color: #ffffff;">Calcule a Área de um Quadrado</h1>
+        <h2 align="middle"><input type="number" placeholder="Valor de um dos lados" id="lado"></h2>
+        <h2 align="middle"><button type="button" onclick="area()">Calcule a Área</button></h2>
+        <h2 align="middle" style="color: #ffffff;" id="a"></h2>
+    </body>
+</html>

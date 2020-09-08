@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 18</title>
+        <script>
+            function calc() {
+                var c = Number(document.getElementById("c").value)
+                
+                res.innerHTML = `O valor em Fahrenheit é: ${(c * 9 / 5)+32} F°`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Celsius para Fahrenheit</h1>
+        <h2 align="middle"><input type="number" placeholder="Valor em C°" id="c"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Converter</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

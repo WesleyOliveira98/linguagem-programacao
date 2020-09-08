@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 17</title>
+        <script>
+            function calc() {
+                var r = Number(document.getElementById("r").value)
+                
+                res.innerHTML = `O valor do comprimento é: ${(2 * Math.PI * r).toFixed(2)} <br />
+                O valor da área é: ${((Math.PI) * (Math.pow(r, 2))).toFixed(2)} <br />
+                O valor do volume é: ${((3/4) * Math.PI * Math.pow(r, 3)).toFixed(2)} <br />`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Comprimento, Área e Volume de uma Esféra</h1>
+        <h2 align="middle"><input type="number" placeholder="Valor do raio" id="r"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

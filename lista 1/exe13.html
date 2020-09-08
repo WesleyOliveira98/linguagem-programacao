@@ -1,0 +1,29 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 13</title>
+        <script>
+            function calc() {
+            const n = Number(document.getElementById("n").value)
+            var i = 1
+            for(var i = 1; i<=10; i++) {
+                res.innerHTML += '<tr>'+
+                    '<td>' + i + '</td>'+
+                    '<td> x </td>'+
+                    '<td>' + n + '</td>'+
+                    '<td> = </td>'+
+                    '<td>' + (i  * n)+ '</td>'+
+                    '</tr>' + '<br />'
+            }
+             
+        }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Tabuada</h1>
+        <h2 style="color: #000000;" align="middle">- <input placeholder="Digite um número" type="number" id="n"> </h2>
+        <h2 align="middle"> <button type="button" onclick="calc()">Ver a Tabuada</button> </h2>
+        <h2 style="color: #ffffff;" align="middle" id="res" style="display: inline;"></h2>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 16</title>
+        <script>
+            function calc() {
+                var n = Number(document.getElementById("n").value)
+                var cod = (document.getElementById("cod").value)
+                var desconto
+                var res
+                if (n <= 30) {
+                    desconto = 0               
+                }
+                else if(n <= 100) {
+                    desconto = n * 0.1            
+                }
+                else if(n > 100) {
+                    desconto = n * 0.15
+                }
+                
+                document.getElementById("res").innerHTML = `Código do Produto: ${cod} <br />
+                O Valor do desconto será de R$${desconto.toFixed(2)} <br />
+                Valor atualizado do produto: R$${(n - desconto).toFixed(2)}`
+
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Consulta de Desconto</h1>
+        <h3 align="middle"><input type="number" placeholder="Valor do Produto" id="n"></h3>
+        <h3 align="middle"><input type="string" placeholder="Código do Produto" id="cod"></h3>
+        <p style="color: #ffffff;" align="middle">Use ponto (.) no lugar da vírgula (,)</p>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="res"></h3>
+    </body>
+</html>

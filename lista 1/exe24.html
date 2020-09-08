@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 24</title>
+        <script>
+            function calc() {
+                var n = Number(document.getElementById("n").value) 
+                
+                res.innerHTML = `Valor em Dólar: US$${(n * 1.8).toFixed(2)} <br />
+                    Valor em Marco Alemão: $${(n * 2).toFixed(2)} <br />
+                    Valor em Libra Esterlina: $${(n * 3.57).toFixed(2)}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Conversão de Moeda</h1>
+        <h2 align="middle"><input type="number" placeholder="Digite um valor" id="n"></h2>
+        <h4 style="color: #ffffff;" align="middle">Coloque ponto (.) no lugar da vírgula (,)</h4>
+        <h2 align="middle"><button type="button" onclick="calc()">Converter</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

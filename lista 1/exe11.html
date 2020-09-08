@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 11</title>
+        <script>
+            function area() {
+                var maior = Number(document.getElementById("maior").value)
+                var menor = Number(document.getElementById("menor").value)
+                var a = (maior * menor)/2
+                document.getElementById("a").innerHTML = `A Área é de ${a}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 align="middle" style="color: #ffffff;">Calcule a Área de um Losango</h1>
+        <h2 align="middle"><input type="number" placeholder="Digite a Diagonal Maior" id="maior"></h2>
+        <h2 align="middle"><input type="number" placeholder="Digite a Diagonal Menor" id="menor"></h2>
+        <h2 align="middle"><button type="button" onclick="area()">Calcule a Área</button></h2>
+        <h2 align="middle" style="color: #ffffff;" id="a"></h2>
+    </body>
+</html>

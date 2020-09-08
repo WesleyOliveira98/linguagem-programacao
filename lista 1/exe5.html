@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 5</title>
+        <script>
+            function dez() {
+                var p = Number(document.getElementById("p").value)
+                var r = p * 0.1
+                document.getElementById("r").innerHTML = `R$${r.toFixed(2)} de desconto`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffffff;" align="middle">10% de DESCONTO!!!</h1>
+        <h2 align="middle" style="color: #ffffffff;">(Em R$) <input type="number" placeholder="Digite o Valor do Produto" id="p"></h2>
+        <h4 style="color: #ffffffff;" align="middle">Use ponto (.) no lugar da vígula (,)</h4>
+        <h2 align="middle"><button type="button" onclick="dez()">Calcule seu desconto</button></h2>
+        <h2 style="color: #ffffffff;" align="middle" id="r"></h2>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 20</title>
+        <script>
+            function calc() {
+                var a = Number(document.getElementById("a").value)
+                var d = Number(document.getElementById("d").value)
+                var rad = a * Math.PI / 180
+                res.innerHTML = `O tamanho da escada é: ${d / Math.cos(rad)}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo para encontrar o tamanho da escada</h1>
+        <h2 align="middle"><input type="number" placeholder="Ângulo Formado" id="a"></h2>
+        <h2 align="middle"><input type="number" placeholder="Distância escada/parede" id="d"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

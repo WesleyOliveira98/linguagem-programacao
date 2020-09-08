@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 24</title>
+        <script>
+            function calc() {
+                var n = Number(document.getElementById("n").value)
+                var op1 = document.querySelector('#form1')
+                var op2 = document.querySelector('#form2')
+
+                function cat(name) {
+                    for (var i = 0; i < op1.length; i++) {
+                        if (op1[i].checked) {
+                            return op1[i].value
+                        }                  
+                    }
+                }
+                categoria = cat(name)
+                console.log(categoria)
+
+                var refrigerado 
+                function ref(name) {
+                    for (var i = 0; i < op2.length; i++) {
+                        if (op2[i].checked) {
+                            return op2[i].value
+                        }            
+                    }
+                }
+                refrigerado = ref(name)
+                console.log(refrigerado)
+
+                var aumento
+                if (n <= 25) {
+                    if (categoria == "Limpeza") {
+                        aumento = n * 0.05
+                    }
+                    else if (categoria == "Alimentação") {
+                        aumento = n * 0.08
+                    }
+                    else if (categoria == "Vestuário") {
+                        aumento = n * 0.1
+                    }
+                }
+                else if (n > 25) {
+                    if (categoria == "Limpeza") {
+                        aumento = n * 0.12
+                    }
+                    else if (categoria == "Alimentação") {
+                        aumento = n * 0.15
+                    }
+                    else if (categoria == "Vestuário") {
+                        aumento = n * 0.18
+                    }
+                }
+                console.log(aumento)
+
+                var imposto
+                if ((categoria == 'Alimentação') && (refrigerado == 's')) {
+                    imposto = n * 0.05
+                }
+                else {
+                    imposto = n * 0.08
+                }
+                console.log(imposto)
+
+                res = (n + aumento) - imposto
+                console.log(res)
+
+                if (res <= 50) {
+                    categoria2 = "Barato"
+                }
+                else if ((res > 50) && (res < 120)) {
+                    categoria2 = "Normal"
+                }
+                else if (res >= 120) {
+                    categoria2 = "Caro"
+                }
+                console.log(categoria2)
+
+                document.getElementById("res").innerHTML = `O novo valor será de R$${res.toFixed(2)} <br />
+                Categoria: ${categoria2}`
+                //document.getElementById("res").innerHTML = `${n} ${categoria} ${refrigerado} ${aumento} ${imposto} ${categoria2} ${res}`
+
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Consulte o Novo Preço do Produto</h1>
+        <h3 align="middle"><input type="number" placeholder="Valor do Produto" id="n"></h3>
+        <p style="color: #ffffff;" align="middle">Use ponto (.) no lugar da vírgula (,)</p>
+        <h3 style="color: #ffffff;" align="middle">Categoria</h3>
+        <form style="color: #ffffff;" align="middle" id="form1">
+            <input type="radio" name="op1" value="Limpeza" /> Limpeza
+            <input type="radio" name="op1" value="Alimentação" /> Alimentação
+            <input type="radio" name="op1" value="Vestuário" /> Vestuário
+        </form>
+        <h3 style="color: #ffffff;" align="middle">Necessita de Regrigeração?</h3>
+        <form style="color: #ffffff;" align="middle" id="form2">
+            <input type="radio" name="op2" value="s" /> Sim
+            <input type="radio" name="op2" value="n" /> Não
+        </form>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulte</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="res"></h3>
+    </body>
+</html>

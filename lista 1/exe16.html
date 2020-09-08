@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 16</title>
+        <script>
+            function calc() {
+                var c1 = Number(document.getElementById("c1").value)
+                var c2 = Number(document.getElementById("c2").value)
+                
+                res.innerHTML = `O valor da hipotenusa é: ${Math.sqrt((c1*c1)+(c2*c2))}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Teorema de Pitágoras</h1>
+        <h2 align="middle"><input type="number" placeholder="Valor do cateto 1" id="c1"></h2>
+        <h2 align="middle"><input type="number" placeholder="Valor do cateto 1" id="c2"></h2>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular Hipotenusa</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

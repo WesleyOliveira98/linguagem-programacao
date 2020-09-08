@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 9</title>
+        <script>
+            function grama() {
+                var peso = Number(document.getElementById("peso").value)
+                var g = peso * 1000
+                document.getElementById("g").innerHTML = `${g}g`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 align="middle" style="color: #ffffff;">Seu peso em gramas</h1>
+        <h2 align="middle"><input type="number" placeholder="Digite o seu peso em KG" id="peso"></h2>
+        <h2 align="middle"><button type="button" onclick="grama()">Ver em gramas</button></h2>
+        <h2 align="middle" style="color: #ffffff;" id="g"></h2>
+    </body>
+</html>

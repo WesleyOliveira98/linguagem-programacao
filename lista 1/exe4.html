@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 4</title>
+        <script>
+            function med() {
+                var n1 = Number(document.getElementById("n1").value)
+                var n2 = Number(document.getElementById("n2").value)
+                var r = ((n1*2)+(n2*3)) / (2+3)
+                document.getElementById("r").innerHTML = `${r}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffffff;" align="middle">Cálculo de Média Ponderada</h1>
+        <h2 style="color: #ffffffff;" align="middle"><input type="number" placeholder="Nota 1" id="n1"></h2>
+        <h2 style="color: #ffffffff;" align="middle"><input type="number" placeholder="Nota 2" id="n2"></h2>
+        <h2 align="middle"><button type="button" onclick="med()">Média Ponderada</button> </h2>
+        <h2 style="color: #ffffffff;" align="middle" id="r"></h2>
+    </body>
+</html>

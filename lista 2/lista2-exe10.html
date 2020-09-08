@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 10</title>
+        <style>
+            body {
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calc() {
+                let custo = Number(document.getElementById("custo").value)
+                let res
+                
+                if (custo <= 12000) {
+                    res = custo * 1.05
+                }
+                else if (custo <= 25000) {
+                    res = (custo * 1.1) + (custo * 0.15)
+                }
+                else if (custo > 25000) {
+                    res = (custo * 1.15) + (custo * 0.2)
+                }
+                document.getElementById("res").innerHTML = `R$${res.toFixed(2)}`
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Cálculo Preço de um Veículo ao Consumidor</h1>
+        <h3>
+            <input type="number" placeholder="Digite o Custo de Fábrica" id="custo">
+        </h3>
+        <h5>Use ponto (.) no lugar da vírgula (,)</h5>
+        <h3><button type="button" onclick="calc()">Calcular Preço</button></h3>
+        <h3 id="res"></h3>
+    </body>
+</html>

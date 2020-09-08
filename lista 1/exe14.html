@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 14</title>
+        <script>
+            function calc() {
+                var n = Number(document.getElementById("n").value) 
+                var ano = Number(document.getElementById("ano").value)
+                
+                res.innerHTML = `Idade <br />
+                    Em anos: ${ano - n} <br />
+                    Em meses: ${(ano - n)*12} <br />
+                    Em semanas: ${(ano - n)*52} <br />
+                    Em dias: ${(ano - n)*365}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Cálculo Quantidade de Salários Mínimos</h1>
+        <h2 align="middle"><input type="number" placeholder="Ano de Nascimento" id="n"></h2>
+        <h2 align="middle"><input type="number" placeholder="Ano Atual" id="ano"></h2>
+        <h4 style="color: #ffffff;" align="middle">Coloque ponto (.) no lugar da vírgula (,)</h4>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular Idade</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 1</title>
+        <script>
+            function sub() {
+            var n1 = Number(document.getElementById("n1").value)
+            var n2 = Number(document.getElementById("n2").value)
+            var res = n1 - n2
+            document.getElementById("res").innerHTML = `${res}`
+        }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Faça a Subtração</h1>
+        <h2 style="color: #000000;" align="middle">- <input placeholder="Digite um número" type="number" id="n1"> </h2>
+        <h2 style="color: #ffffff;" align="middle">- <input placeholder="Digite um número" type="number" id="n2"> </h2>
+        <h2 align="center"> <button type="button" onclick="sub()"> = </button> </h2>
+        <h2 style="color: #ffffff;" align="middle" id="res">
+
+        </h2>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 15</title>
+        <script>
+            function calc() {
+                var sal = Number(document.getElementById("sal").value) 
+                var c1 = Number(document.getElementById("c1").value)
+                var c2 = Number(document.getElementById("c2").value)
+                
+                res.innerHTML = `Valor da conta 1 com juros: R$${(c1*1.02).toFixed(2)} <br />
+                    Valor da conta 2 com juros: R$${(c2*1.02).toFixed(2)} <br /><br />
+                    Salário após acerto das contas: R$${(sal - ((c1*1.02)+(c2*1.02))).toFixed(2)}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Salário após pagamento de contas</h1>
+        <h2 align="middle"><input type="number" placeholder="Digite o seu Salário" id="sal"></h2>
+        <h2 align="middle"><input type="number" placeholder="Valor da conta 1" id="c1"></h2>
+        <h2 align="middle"><input type="number" placeholder="Valor da conta 2" id="c2"></h2>
+        <h4 style="color: #ffffff;" align="middle">Coloque ponto (.) no lugar da vírgula (,)</h4>
+        <h2 align="middle"><button type="button" onclick="calc()">Calcular</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

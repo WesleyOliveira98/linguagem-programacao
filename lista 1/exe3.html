@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 3</title>
+        <script>
+            function div() {
+                var n1 = Number(document.getElementById("n1").value)
+                var n2 = Number(document.getElementById("n2").value)
+                var r = n1 / n2
+                document.getElementById("r").innerHTML = `${r}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Faça a Divisão</h1>
+        <h1 align="middle" style="color: #ffffff;"><input type="number" placeholder="Digite um número" id="n1"> /
+        <input type="number" placeholder="Digite um número" id="n2"> </h1>
+        <h1 align="middle"><button type="button" onclick="div()">=</button> </h1>
+        <h2 align="middle" style="color: #ffffff;" id="r"> </h2>
+    </body>
+</html>

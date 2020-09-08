@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 14</title>
+        <script>
+            function calc() {
+                var sal = Number(document.getElementById("sal").value)
+                var res
+                if (sal <= 300) {
+                    res = sal * 1.5
+                    document.getElementById("res").innerHTML = `O Salário reajustado será de R$${res.toFixed(2)}`
+                }
+                else if(sal <= 500) {
+                    res = sal * 1.4
+                    document.getElementById("res").innerHTML = `O Salário reajustado será de R$${res.toFixed(2)}`
+                }
+                else if(sal <= 700) {
+                    res = sal * 1.3
+                    document.getElementById("res").innerHTML = `O Salário reajustado será de R$${res.toFixed(2)}`
+                }
+                else if(sal <= 800) {
+                    res = sal * 1.2
+                    document.getElementById("res").innerHTML = `O Salário reajustado será de R$${res.toFixed(2)}`
+                }
+                else if(sal <= 1000) {
+                    res = sal * 1.1
+                    document.getElementById("res").innerHTML = `O Salário reajustado será de R$${res.toFixed(2)}`
+                }
+                else if(sal > 1000) {
+                    res = sal * 1.05
+                    document.getElementById("res").innerHTML = `O Salário reajustado será de R$${res.toFixed(2)}`
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Consulta de Aumento Salarial</h1>
+        <h3 align="middle"><input type="number" placeholder="Digite o seu Salário Atual" id="sal"></h3>
+        <p style="color: #ffffff;" align="middle">Use ponto (.) no lugar da vírgula (,)</p>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="res"></h3>
+    </body>
+</html>

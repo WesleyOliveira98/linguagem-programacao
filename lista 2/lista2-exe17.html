@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 17</title>
+        <script>
+            function login() {
+                var pass = document.getElementById("pass").value
+                var res
+                if (pass == 4531) {
+                    res = "Acesso Liberado <br /> Aguarde..."
+                }
+                else {
+                    res = "Senha Incorreta!"  
+                }             
+                document.getElementById("res").innerHTML = `${res}`
+
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Entre com a senha</h1>
+        <h3 align="middle"><input type="password" placeholder="Senha" id="pass"></h3>
+        <h3 align="middle"><button type="button" onclick="login()">Entrar</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="res"></h3>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 5</title>
+        <style>
+            body {
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calc() {
+                let n1 = Number(document.getElementById("n1").value)
+                let n2 = Number(document.getElementById("n2").value)
+                let op = Number(document.getElementById("op").value)
+                let res
+                switch (op) {
+                    case 1: res = (n1 + n2) / 2
+                        break;
+                    case 2: if (n1 > n2) {
+                            res = n1 - n2
+                        }
+                            else {
+                            res = n2 - n1
+                            }                      
+                        break;
+                    case 3: res = (n1 * n2)
+                        break;
+                    case 4: if (n2 != 0) {
+                        res = n1 / n2
+                    }
+                            else {
+                            res = "Não é possível dividir por zero!"
+                            }
+                        break;
+                    default: res = "Operação Inválida"
+                        break;
+                    }
+                    document.getElementById("res").innerHTML = `${res}`
+                }
+        </script>
+    </head>
+    <body>
+         <h1>Lista 2 - Exercício 5</h1>
+         <h3><input type="number" placeholder="Digite um Número" id="n1"></h3>
+         <h3><input type="number" placeholder="Digite um Número" id="n2"></h3>
+         <h3>Escolha a Operação</h3>
+            <select id="op">
+                <option value="1">1. Média</option>
+                <option value="2">2. Diferença do maior pelo menor</option>
+                <option value="3">3. Multiplicação</option>
+                <option value="4">4. Divisão do primeiro pelo segundo</option>
+            </select>
+        </h3>
+        <h3><button type="button" onclick="calc()">Calcular</button></h3>
+        <h3 id="res"></h3>
+    </body>
+</html>

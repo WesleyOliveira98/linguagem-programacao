@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 22</title>
+        <style>
+            body {
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calc() {
+                let i = Number(document.getElementById("i").value)
+                let peso = Number(document.getElementById("peso").value)
+                let res
+                if (i < 20) {
+                    if (peso <= 60) {
+                        res = 9
+                    }
+                    else if (peso <= 90) {
+                        res = 8
+                    }
+                    else if (peso > 90) {
+                        res = 7
+                    }
+                }
+                else if (i <= 50) {
+                    if (peso <= 60) {
+                        res = 6
+                    }
+                    else if (peso <= 90) {
+                        res = 5
+                    }
+                    else if (peso > 90) {
+                        res = 4
+                    }
+                }
+                else if (i > 50) {
+                    if (peso <= 60) {
+                        res = 3
+                    }
+                    else if (peso <= 90) {
+                        res = 2
+                    }
+                    else if (peso > 90) {
+                        res = 1
+                    }
+                }
+                document.getElementById("resposta").innerHTML = `O seu grupo de risco é o: ${res}`
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Consulte seu Grupo de Risco</h1>
+        <h3><input type="number" placeholder="Digite sua idade" id="i"></h3>
+        <h3><input type="number" placeholder="Digite seu peso (kg)" id="peso"></h3>
+        <h3><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 id="resposta"></h3>
+    </body>
+</html>

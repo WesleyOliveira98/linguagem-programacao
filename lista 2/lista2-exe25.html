@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 25</title>
+        <script>
+            function calc() {
+                var he = Number(document.getElementById("he").value)
+                var f = Number(document.getElementById("f").value)
+                var min = (he - (2/3 * (f)))*60
+                if (min < 600) {
+                    res = 100
+                }
+                else if (min < 1200) {
+                    res = 200
+                }
+                else if (min < 1800) {
+                    res = 300
+                }
+                else if (min < 2400) {
+                    res = 400
+                }
+                else if (min >= 2400) {
+                    res = 500
+                }
+                document.getElementById("resposta").innerHTML = `O seu Bônus de Natal é: R$${res}`
+
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Consulte seu Bônus de Natal</h1>
+        <h3 align="middle"><input type="number" placeholder="Horas Extras" id="he"></h3>
+        <h3 align="middle"><input type="number" placeholder="Horas de Falta" id="f"></h3>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="resposta"></h3>
+    </body>
+</html>

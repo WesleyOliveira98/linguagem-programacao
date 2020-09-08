@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 2</title>
+        <script>
+            function mult() {
+                var n1 = Number(document.getElementById("n1").value)
+                var n2 = Number(document.getElementById("n2").value)
+                var n3 = Number(document.getElementById("n3").value)
+                var r = n1 * n2 * n3
+                document.getElementById("r").innerHTML = `${r}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Multiplique 3 números</h1>
+        <h2 align="middle"><input placeholder="Digite um número" type="number" id="n1"> </h2>
+        <h2 align="middle"><input placeholder="Digite um número" type="number" id="n2"> </h2>
+        <h2 align="middle"><input placeholder="Digite um número" type="number" id="n3"> </h2>
+        <h2 align="middle"><button type="button" onclick="mult()">=</h2>
+        <h2 style="color: #ffffff;" align="middle" id="r"> </h2>
+    </body>
+</html>

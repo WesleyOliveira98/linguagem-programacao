@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 25</title>
+        <script>
+            function calc() {
+                var n = (document.getElementById("n").value) 
+                var hora = Number(n.split(":").slice(0,-1))
+                var min = Number(n.split(":").slice(-1))
+                
+                res.innerHTML = `Hora digitada em minutos é ${hora * 60} <br />
+                    Total de minutos é ${min + (hora * 60)} <br />
+                    Total de segundos é ${(min + (hora * 60)) * 60}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Conversão de Valores de Tempo</h1>
+        <h2 align="middle"><input type="string" placeholder="Digite uma horar" id="n"></h2>
+        <h4 style="color: #ffffff;" align="middle">Seguindo o modelo (HH:MM)</h4>
+        <h2 align="middle"><button type="button" onclick="calc()">Converter</button></h>
+        <h2 align="middle" style="color: #ffffff;" id="res"></h2>   
+    </body>
+</html>

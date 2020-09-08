@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 23</title>
+        <style>
+            body {
+                background-color: black;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function calc() {
+                let cod = Number(document.getElementById("cod").value)
+                let q = Number(document.getElementById("q").value)
+                let valor
+                let total
+                let res
+
+                if ((cod >= 1) && (cod <= 10)) {
+                    valor = 10
+                }
+                else if ((cod >= 11) && (cod <= 20)) {
+                    valor = 15
+                }
+                else if ((cod >= 21) && (cod <= 30)) {
+                    valor = 20
+                }
+                else if ((cod >= 31) && (cod <= 40)) {
+                    valor = 30
+                }
+                else {
+                    res = "Código Inválido"
+                }
+
+                total = valor * q
+                
+                let des
+                if (total <= 250) {
+                        des = total * 0.05
+                    }
+                else if (total <= 500) {
+                        des = total * 0.1
+                    }
+                else if (total > 500) {
+                        des = total * 0.15
+                    }
+                
+                res = `Código do Produto: ${cod} <br />
+                Valor Únitario do Produto: R$${valor.toFixed(2)} <br />
+                Quantidade Selecionada: ${q}<br /><br />
+                Valor Total da Nota: R$${total.toFixed(2)} <br /><br />
+                Descontos: R$${des.toFixed(2)} <br /><br />
+                Valor a Pagar: R$${(total - des).toFixed(2)}`
+
+                document.getElementById("resposta").innerHTML = `${res}`
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Consulta a Procedência do Produto</h1>
+        <h3><input type="number" placeholder="Código do Produto" id="cod"></h3>
+        <h3><input type="number" placeholder="Quantidade" id="q"></h3>
+        <h3><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 id="resposta"></h3>
+    </body>
+</html>

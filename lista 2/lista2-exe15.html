@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 15</title>
+        <script>
+            function calc() {
+                var sal = Number(document.getElementById("sal").value)
+                var op = Number(document.getElementById("op").value)
+                var res
+                switch (op) {
+                    case 1:
+                        res = sal * 1.03
+                        break;
+                    case 2:
+                        res = sal * 1.04
+                        break;
+                    default:
+                        res = "Opção Inválida"
+                        break;
+                }
+                document.getElementById("res").innerHTML = `O valor corrigido com juros após 1 mês é de R$${res.toFixed(2)}`
+            }
+        </script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: #ffffff;" align="middle">Simulação de Investimento referente a 1 mês</h1>
+        <h3 align="middle"><input type="number" placeholder="Valor de Investimento" id="sal"></h3>
+        <h2 style="color: #ffffff;" align="middle">Digite o número referente a opção de investimento</h2>
+        <h3 style="color: #ffffff;" align="middle">
+            1. Poupança <br />
+            2. Fundos de renda fixa
+        </h3>
+        <h3 align="middle"><input type="number" placeholder="Opção de Investimento" id="op"></h3>
+        <h3 align="middle"><button type="button" onclick="calc()">Consulta</button></h3>
+        <h3 style="color: #ffffff;" align="middle" id="res"></h3>
+    </body>
+</html>
